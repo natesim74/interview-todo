@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Angular To‑Do List</h1>
+
+  <form (ngSubmit)="addTask()">
+    <input
+      type="text"
+      [(ngModel)]="newTaskTitle"
+      name="taskTitle"
+      placeholder="New task..."
+      required
+    />
+    <button type="submit">Add</button>
+  </form>
+
+  <div class="task-list">
+    <app-task
+      *ngFor="let t of tasks"
+      [task]="t"
+      (update)="updateTask($event)"
+      (delete)="deleteTask($event)"
+    ></app-task>
+  </div>
+</div>
+

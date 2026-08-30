@@ -1,0 +1,15 @@
+.container {
+  width: 400px;
+  margin: 40px auto;
+  font-family: Arial;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.task select {
+  margin: 0 10px;
+}
